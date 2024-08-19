@@ -280,3 +280,129 @@ footer {
         padding: 8px;
     }
 }
+
+
+/* Estilos para la sección de Educación */
+#educacion {
+    padding: 50px 0;
+    border-bottom: 1px solid #00ff00;
+}
+
+.institucion {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.institucion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.institucion img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+.institucion .info h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.institucion .info p {
+    color: #b3b3b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividad para la sección de Educación */
+@media (max-width: 768px) {
+    .institucion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .institucion img {
+        margin-bottom: 15px;
+    }
+}
+
+/* Estilos para la sección de Experiencia Laboral */
+#experiencia-laboral {
+    padding: 50px 0;
+    border-bottom: 1px solid #00ff00;
+}
+
+.empresa {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empresa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.empresa img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+.empresa .info h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.empresa .info p {
+    color: #b3b3b3;
+}
+
+/* Reutilización de animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividad para la sección de Experiencia Laboral */
+@media (max-width: 768px) {
+    .empresa {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .empresa img {
+        margin-bottom: 15px;
+    }
+}
