@@ -1,124 +1,12 @@
-body {
-    font-family: 'Courier New', monospace;
-    background-color: #0a0a0a;
-    color: #33ff33;
-    margin: 0;
-    padding: 0;
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --text-color: #2d3436;
+    --background-color: #ffffff;
+    --section-bg: #f5f6fa;
+    --transition: all 0.3s ease;
 }
 
-header {
-    background-color: #000000;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    color: #33ff33;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #33ff33;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #00ff00;
-}
-
-section {
-    padding: 50px;
-    border-bottom: 1px solid #33ff33;
-}
-
-.proyecto {
-    background-color: #1a1a1a;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-    padding: 20px;
-    margin: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.proyecto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
-}
-
-.proyecto img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #33ff33;
-    margin-bottom: 15px;
-}
-
-h2, h3 {
-    color: #33ff33;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #33ff33;
-    color: #0a0a0a;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 10px rgba(0, 255, 0, 0.2);
-}
-
-footer {
-    background-color: #000000;
-    padding: 10px;
-    text-align: center;
-    color: #33ff33;
-    border-top: 1px solid #33ff33;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-
-
-/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -126,283 +14,238 @@ footer p {
 }
 
 body {
-    font-family: 'Courier New', monospace;
-    background-color: #0d0d0d;
-    color: #00ff00;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 header {
-    background-color: #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #00ff00;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin-bottom: 10px;
-    color: #00ff00;
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 2rem;
+    list-style: none;
 }
 
-nav ul li a {
-    color: #00ff00;
+nav a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: var(--transition);
 }
 
-nav ul li a:hover {
-    color: #33ff33;
+nav a:hover {
+    color: var(--secondary-color);
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    margin-top: 80px;
+    padding: 2rem;
 }
 
 section {
-    padding: 50px 0;
-    border-bottom: 1px solid #00ff00;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
-h2 {
-    font-size: 24px;
-    color: #00ff00;
-    margin-bottom: 20px;
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
     position: relative;
-    animation: slideIn 1s ease-out;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
 }
 
-.proyecto {
-    background-color: #1a1a1a;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #00ff00;
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: var(--transition);
 }
 
-.proyecto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00ff00;
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
-.proyecto img {
-    max-width: 100%;
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-description {
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background-color: var(--section-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.education-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
     border-radius: 10px;
-    margin-bottom: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-ul {
-    list-style: none;
-    padding-left: 20px;
+.education-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
-ul li {
-    margin-bottom: 10px;
-    font-size: 18px;
+.contact-container {
+    text-align: center;
 }
 
 .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+    background-color: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
 }
 
 .whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
 }
 
-/* Footer */
 footer {
+    background-color: var(--primary-color);
+    color: white;
     text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-top: 2px solid #00ff00;
+    padding: 2rem;
+    margin-top: 4rem;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .education-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .education-logo {
+        margin: 0 auto;
+    }
+
     nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .proyecto {
-        margin-bottom: 20px;
-    }
-
-    .whatsapp-button {
-        bottom: 10px;
-        right: 10px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 20px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .whatsapp-button {
-        padding: 8px;
-    }
-}
-
-
-/* Estilos para la sección de Educación */
-#educacion {
-    padding: 50px 0;
-    border-bottom: 1px solid #00ff00;
-}
-
-.institucion {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #00ff00;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.institucion:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00ff00;
-}
-
-.institucion img {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    animation: fadeIn 1s ease-out;
-}
-
-.institucion .info h3 {
-    color: #00ff00;
-    margin-bottom: 10px;
-}
-
-.institucion .info p {
-    color: #b3b3b3;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Responsividad para la sección de Educación */
-@media (max-width: 768px) {
-    .institucion {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .institucion img {
-        margin-bottom: 15px;
-    }
-}
-
-/* Estilos para la sección de Experiencia Laboral */
-#experiencia-laboral {
-    padding: 50px 0;
-    border-bottom: 1px solid #00ff00;
-}
-
-.empresa {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #00ff00;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.empresa:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00ff00;
-}
-
-.empresa img {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    animation: fadeIn 1s ease-out;
-}
-
-.empresa .info h3 {
-    color: #00ff00;
-    margin-bottom: 10px;
-}
-
-.empresa .info p {
-    color: #b3b3b3;
-}
-
-/* Reutilización de animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Responsividad para la sección de Experiencia Laboral */
-@media (max-width: 768px) {
-    .empresa {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .empresa img {
-        margin-bottom: 15px;
+        gap: 1rem;
     }
 }

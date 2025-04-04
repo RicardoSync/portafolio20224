@@ -3,127 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Ricardo Escobedo</title>
+    <title>Ricardo Escobedo | Ingeniero en Sistemas Computacionales</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Ricardo Escobedo</h1>
-        <nav>
-            <ul>
-                <li><a href="#acerca-de">Acerca de mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Ricardo Escobedo</h1>
+            <nav>
+                <ul>
+                    <li><a href="#acerca-de">Acerca de mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="acerca-de">
-            <h2>Acerca de mí</h2>
-            <img src="black_suit.png" alt="Tu foto">
-            <p>Mi nombre es Ricardo Escobedo, ingeniero en Sistemas Computacionales con especialidad en desarrollo de software.</p>
-            <p>Soy una persona con valores, ética y principios. Estoy listo para ayudar de la manera más efectiva posible.</p>
-            <ul>
-                <li>Electrónica e IoT</li>
-                <li>Python</li>
-                <li>Redes inalámbricas y redes de computadoras</li>
-                <li>Automatizaciones</li>
-                <li>Electricidad e instalaciones eléctricas de baja tensión</li>
-            </ul>
+            <h2 class="section-title">Acerca de mí</h2>
+            <div class="about-container">
+                <img src="black_suit.png" alt="Ricardo Escobedo" class="profile-image">
+                <div class="about-text">
+                    <p>Soy un Ingeniero en Sistemas Computacionales apasionado por la tecnología y la innovación. Mi enfoque se centra en el desarrollo de soluciones tecnológicas que resuelvan problemas reales, combinando conocimientos en electrónica, programación y redes.</p>
+                    <p>Con una sólida formación técnica y un compromiso con la excelencia, me especializo en:</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Electrónica e IoT</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Redes Inalámbricas</span>
+                        <span class="skill-tag">Automatización</span>
+                        <span class="skill-tag">Sistemas Embebidos</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="proyectos">
-            <h2>Proyectos</h2>
-            <div class="proyecto">
-                <img src="ConnectionApp3(1).png" alt="ConnectionApp">
-                <h3>ConnectionApp</h3>
-                <p>Software desarrollado para usuarios con WISP o ISP.</p>
-                <ul>
-                    <li>Compatible con Microtik usando Simple Queue para el control del ancho de banda</li>
-                    <li>Generador de recibos modificables, logo, título, mensaje</li>
-                    <li>Cambio de velocidades, bloqueo automático y manual</li>
-                    <li>SpeedTest integrado</li>
-                    <li>Capacidad de reinicio de antenas Ubiquiti</li>
-                    <li>Realizar pruebas de ping</li>
-                </ul>
-            </div>
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="ConnectionApp3(1).png" alt="ConnectionApp" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">ConnectionApp</h3>
+                        <p class="project-description">Sistema integral de gestión para proveedores de servicios de internet (WISP/ISP), con control de ancho de banda y generación de recibos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Microtik</span>
+                            <span class="tech-tag">Ubiquiti</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="proyecto">
-                <img src="red2.jpeg" alt="Wisp DOBLENET">
-                <h3>Wisp DOBLENET</h3>
-                <p>Proveedor de internet a una comunidad local - Tierra Blanca, Loreto, Zacatecas.</p>
-                <ul>
-                    <li>Tecnologías Microtik para el control y Ubiquiti para la distribución</li>
-                    <li>Uso de Ubuntu Server para asignar a los clientes mediante DHCP Server</li>
-                    <li>Mini PC con Debian corriendo scripts en Python para gestión (fallas, cortes, etc.)</li>
-                    <li>ConnectionApp como software de control del WISP</li>
-                </ul>
-            </div>
+                <div class="project-card">
+                    <img src="red2.jpeg" alt="Wisp DOBLENET" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Wisp DOBLENET</h3>
+                        <p class="project-description">Implementación de red inalámbrica para proveer servicios de internet a una comunidad local, incluyendo gestión de usuarios y monitoreo.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Ubuntu Server</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">DHCP</span>
+                            <span class="tech-tag">Redes</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="proyecto">
-                <img src="bot3.jpeg" alt="BotChallenge - Arnold T-800">
-                <h3>BotChallenge - Arnold T-800</h3>
-                <p>Desarrollo de un robot usando una Esp32 como cerebro, servos e impresión 3D para su estructura.</p>
-                <ul>
-                    <li>Control mediante Bluetooth y reconocimiento facial usando una Raspberry Pi</li>
-                    <li>Implementación de inteligencia artificial para reconocimiento facial</li>
-                    <li>Modelado 3D e impresión de la estructura</li>
-                </ul>
-            </div>
-
-            <div class="proyecto">
-                <img src="ai.png" alt="AI App - Testing">
-                <h3>AI App - Testing</h3>
-                <p>Aplicación en Python para usuarios de Linux, demostrando el funcionamiento de AI para reconocimiento facial con la API de Google.</p>
+                <div class="project-card">
+                    <img src="bot3.jpeg" alt="BotChallenge - Arnold T-800" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">BotChallenge - Arnold T-800</h3>
+                        <p class="project-description">Robot controlado por ESP32 con reconocimiento facial mediante Raspberry Pi, demostrando la integración de hardware y software.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">IA</span>
+                            <span class="tech-tag">3D Printing</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Python</li>
-                <li>Electrónica</li>
-                <li>Kotlin</li>
-                <li>Electricidad y circuitos eléctricos</li>
-                <li>Linux - Debian, OpenSUSE, Fedora, RedHat</li>
-            </ul>
-        </section>
-
-        <section id="contacto">
-            <a href="https://wa.me/5214961051384" target="_blank" class="whatsapp-button">
-                <i class="fab fa-whatsapp"></i> Contáctame por WhatsApp
-            </a>
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Electrónica</span>
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Redes</span>
+                <span class="skill-tag">IoT</span>
+                <span class="skill-tag">Automatización</span>
+                <span class="skill-tag">Git</span>
+            </div>
         </section>
 
         <section id="educacion">
-            <h2>Educación</h2>
-            <div class="institucion">
-                <img src="cbtis215.png" alt="CBTIS 167">
-                <div class="info">
-                    <h3>CBTIS 215 - Centro de Bachillerato Tecnológico Industrial y de Servicios</h3>
-                    <p>Bachillerato técnico en Electrónica. Aquí desarrollé mis conocimientos básicos en electrónica y programación, formando la base de mi carrera en sistemas computacionales.</p>
+            <h2 class="section-title">Educación</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <img src="cbtis215.png" alt="CBTIS 215" class="education-logo">
+                    <div class="info">
+                        <h3>CBTIS 215</h3>
+                        <p>Bachillerato técnico en Electrónica</p>
+                        <p>Formación fundamental en electrónica y programación</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="institucion">
-                <img src="LogoTecLoretoOriginal.svg" alt="UPZ">
-                <div class="info">
-                    <h3>Instituto Tecnologico Superior de Loreto</h3>
-                    <p>Ingeniería en Sistemas Computacionales. Aquí adquirí una formación sólida en desarrollo de software, redes, y sistemas computacionales, especializándome en tecnologías modernas y programación avanzada.</p>
+                
+                <div class="education-card">
+                    <img src="LogoTecLoretoOriginal.svg" alt="ITS Loreto" class="education-logo">
+                    <div class="info">
+                        <h3>Instituto Tecnológico Superior de Loreto</h3>
+                        <p>Ingeniería en Sistemas Computacionales</p>
+                        <p>Especialización en desarrollo de software y redes</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
+        <section id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-container">
+                <a href="https://wa.me/5214961051384" target="_blank" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>
+                    Contáctame por WhatsApp
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        &copy; Ricardo Escobedo - [2024]
+        <p>&copy; 2024 Ricardo Escobedo. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://kit.fontawesome.com/tu_clave_font_awesome.js" crossorigin="anonymous"></script>
 </body>
 </html>
